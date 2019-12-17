@@ -10,11 +10,11 @@ use App\Services\TestBasicService;
 
 /**
 
- * @method getOne()
- * @method setName(String $var)
- * @method setAge(Int $var)
- * @method setIsMen(bool $var)
- * @method getOneValues()
+ * @method static getOne()
+ * @method static setName(String $var)
+ * @method static setAge(Int $var)
+ * @method static setIsMen(bool $var)
+ * @method static getOneValues()
 
  * @see \App\Services\TestBasicService
 
@@ -26,7 +26,7 @@ class TestBasicServiceFacade  extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return TestBasicService::class;
+        return 'service.vk_basic';
     }
 
 }
