@@ -4,11 +4,25 @@ namespace App\Services;
 
 use Illuminate\Http\Request;
 
+class TestOne
+{
+    private $name;
+    private $age;
+    private $isMen;
+}
+
+
 class TestBasicService
 {
     private $name = 'Petya';
     private $age = 18;
     private $isMen = true;
+    private $testOne;
+
+    public function __construct(TestOne $Var)
+    {
+        $this->testOne = $Var;
+    }
 
     private function getType()
     {
@@ -44,5 +58,4 @@ class TestBasicService
         return $this->getType();
     }
 }
-
 
