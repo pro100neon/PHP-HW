@@ -10,7 +10,7 @@ class TestController extends Controller
     public function getOne()
     {
         $result = new TestOne();
-        return $result->getOne();
+        return response()->json($result->getOne());
     }
 
     public function setOne(Request $request)
@@ -21,7 +21,7 @@ class TestController extends Controller
         $result->setAge($request->json()->get('age'));
         $result->setIsMen($request->json()->get('isMen'));
 
-        return $result->getOneValues();
+        return response()->json($result->getOneValues());
     }
 
 }
