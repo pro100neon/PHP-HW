@@ -34,16 +34,16 @@ class TestOne
 
     private function getType()
     {
-        return ['name' => gettype($this->name),
+        return array(['name' => gettype($this->name),
             'age' => gettype($this->age),
-            'isMen' => gettype($this->isMen)];
+            'isMen' => gettype($this->isMen)]);
     }
 
     public function getOneValues()
     {
-        return ['name' => $this->name,
+        return array(['name' => $this->name,
             'age' => $this->age,
-            'isMen' => $this->isMen];
+            'isMen' => $this->isMen]);
     }
 
     public function setName(String $var)
