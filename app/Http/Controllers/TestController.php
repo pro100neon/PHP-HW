@@ -46,4 +46,9 @@ class TestController extends Controller
         return response()->json('my first test', 200);
     }
 
+    public function testExc(Request $request)
+    {
+        return response()->json(TestBasicService::getException($request->id));
+    }
+
 }

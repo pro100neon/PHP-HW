@@ -28,6 +28,11 @@ class Test extends Model
         }
      }
 
+//    public static function task6InHW(Int $id)
+//    {
+//        return Test::find($id);
+//    }
+
     public static function task8InHW(string $text) {
         $result = Test::where('text', $text)->select('*')->get();
         if (!$result) {

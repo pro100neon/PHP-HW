@@ -3,6 +3,8 @@
 namespace App\Services;
 
 use Illuminate\Http\Request;
+use App\Exceptions\MyTestException;
+use App\Models\Test;
 
 class TestOne
 {
@@ -56,6 +58,13 @@ class TestBasicService
     public function getOne()
     {
         return $this->getType();
+    }
+
+    public static function getException($id)
+    {
+        $result = Test::find($id);
+        throw_if($result == null, MyTestException::class);
+        return $result;
     }
 }
 
