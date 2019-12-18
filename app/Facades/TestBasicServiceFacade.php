@@ -14,6 +14,7 @@ use App\Services\TestBasicService;
  * @method static setName(String $var)
  * @method static setAge(Int $var)
  * @method static setIsMen(bool $var)
+ * @method static getForMock(string $var)
  * @method static getOneValues()
 
  * @see \App\Services\TestBasicService

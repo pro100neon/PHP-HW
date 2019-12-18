@@ -66,5 +66,11 @@ class TestBasicService
         throw_if($result == null, MyTestException::class);
         return $result;
     }
+
+    public static function getForMock(string $var)
+    {
+        return $var;
+    }
+
 }
 
