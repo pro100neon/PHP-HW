@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use PhpParser\Node\Expr\Cast\Int_;
 
 class Test extends Model
 {
@@ -15,4 +16,17 @@ class Test extends Model
         Test::where('id', $maxId)->update(['text' => 'So what about pepito?', 'is_enabled' => 1]);
         return $maxId;
     }
+
+    public static function task6InHW(Int $id)
+    {
+        $result = Test::where('id', $id)->get();
+        if (!$result) {
+            return $result;
+        } else {
+            return null;
+        }
+     }
+
+
+
 }
