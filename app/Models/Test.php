@@ -28,6 +28,14 @@ class Test extends Model
         }
      }
 
+    public static function task8InHW(string $text) {
+        $result = Test::where('text', $text)->select('*')->get();
+        if (!$result) {
+            return null;
+        } else {
+            return collect($result);
+        }
+     }
 
 
 }

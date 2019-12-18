@@ -36,5 +36,9 @@ class TestController extends Controller
     {
         return response()->json(Test::task6InHW($request->id));
     }
+    public function getTestByText(Request $request)
+    {
+        return response()->json(Test::task8InHW($request->Text));
+    }
 
 }
