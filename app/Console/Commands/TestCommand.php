@@ -37,6 +37,6 @@ class TestCommand extends Command
      */
     public function handle()
     {
-        echo 'not my first test';
+        $this->line('not my first test');
     }
 }

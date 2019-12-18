@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Facades\TestBasicServiceFacade;
 
-class TestMokeServiceFacade extends TestCase
+class MokeServiceFacadeTest extends TestCase
 {
     /**
      * A basic feature test example.

@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class TestConsole extends TestCase
+class ConsoleTest extends TestCase
 {
     /**
      * A basic feature test example.
