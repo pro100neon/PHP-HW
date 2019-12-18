@@ -24,3 +24,5 @@ Route::group(['prefix' => 'group','middleware' => 'checkApi'], function (){
     Route::get('/getTestById/{id}', 'TestController@getTestById');
     Route::get('/getTestByText/{Text}', 'TestController@getTestByText');
 });
+
+Route::get('/test', 'TestController@test');

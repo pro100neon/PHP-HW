@@ -41,4 +41,9 @@ class TestController extends Controller
         return response()->json(Test::task8InHW($request->Text));
     }
 
+    public function test()
+    {
+        return response()->json('my first test', 200);
+    }
+
 }
