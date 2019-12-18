@@ -7,6 +7,7 @@ use PhpParser\Node\Expr\Cast\Int_;
 
 class Test extends Model
 {
+    public $table = "tests";
     protected $fillable = ['text', 'is_enabled'];
     protected $casts = ['is_enabled' => 'boolean'];
 
@@ -19,11 +20,11 @@ class Test extends Model
 
     public static function task6InHW(Int $id)
     {
-        $result = Test::where('id', $id)->get();
+        $result = Test::where('id', $id)->select('*')->get();
         if (!$result) {
-            return $result;
-        } else {
             return null;
+        } else {
+            return $result;
         }
      }
 

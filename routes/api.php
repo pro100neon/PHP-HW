@@ -21,4 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['prefix' => 'group','middleware' => 'checkApi'], function (){
     Route::get('/test/one', 'TestController@getOne');
     Route::post('/test/one', 'TestController@setOne');
+    Route::get('/getTestById/{id}', 'TestController@getTestById');
 });

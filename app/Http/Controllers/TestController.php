@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\TestBasicService;
 use App\Facades\TestBasicServiceFacade;
+use App\Models\Test;
 
 class TestController extends Controller
 {
@@ -29,6 +30,11 @@ class TestController extends Controller
         TestBasicServiceFacade::setIsMen($request->json()->get('isMen'));
 
         return response()->json(TestBasicServiceFacade::getOneValues());
+    }
+
+    public function getTestById(Request $request)
+    {
+        return response()->json(Test::task6InHW($request->id));
     }
 
 }
